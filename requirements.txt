@@ -1,0 +1,74 @@
+absl-py==1.0.0
+aiohttp @ file:///C:/ci/aiohttp_1602530358780/work
+astor==0.8.1
+async-timeout==3.0.1
+attrs @ file:///tmp/build/80754af9/attrs_1600298409949/work
+blinker==1.4
+brotlipy==0.7.0
+cached-property==1.5.2
+cachetools==4.2.4
+certifi==2021.10.8
+cffi @ file:///C:/ci/cffi_1600699250966/work
+chardet==3.0.4
+charset-normalizer==2.0.8
+click==7.1.2
+colorama==0.4.4
+cryptography @ file:///C:/ci/cryptography_1601046913206/work
+cycler==0.11.0
+fonttools==4.28.4
+gast==0.2.2
+google-auth==1.35.0
+google-auth-oauthlib==0.4.6
+google-pasta==0.2.0
+grpcio==1.42.0
+h5py==3.6.0
+idna==3.3
+importlib-metadata==4.8.2
+Keras==2.3.1
+Keras-Applications @ file:///tmp/build/80754af9/keras-applications_1594366238411/work
+Keras-Preprocessing==1.1.2
+kiwisolver==1.3.2
+Markdown==3.3.6
+matplotlib==3.5.1
+mkl-fft==1.3.0
+mkl-random==1.1.1
+mkl-service==2.3.0
+multidict @ file:///C:/ci/multidict_1600456486794/work
+numpy==1.21.4
+oauthlib==3.1.1
+opt-einsum==3.3.0
+packaging==21.3
+pandas==1.3.5
+Pillow==8.4.0
+protobuf==3.19.1
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
+PyJWT==1.7.1
+pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1594392929924/work
+pyparsing==3.0.6
+pyreadline==2.1
+PySocks @ file:///C:/ci/pysocks_1594394709107/work
+python-dateutil==2.8.2
+pytz==2021.3
+PyYAML==6.0
+requests==2.26.0
+requests-oauthlib==1.3.0
+rsa==4.8
+scipy @ file:///C:/ci/scipy_1616703425152/work
+six==1.16.0
+tensorboard @ file:///tmp/build/80754af9/tensorboard_1633093581375/work/tensorboard-2.6.0-py3-none-any.whl
+tensorboard-data-server @ file:///C:/ci/tensorboard-data-server_1633035239744/work/tensorboard_data_server-0.6.0-py3-none-any.whl
+tensorboard-plugin-wit==1.6.0
+tensorflow==2.1.0
+tensorflow-estimator @ file:///home/builder/adipietro/tf/tensorflow-estimator_1630508970172/work/tensorflow_estimator-2.6.0-py2.py3-none-any.whl
+termcolor==1.1.0
+tqdm==4.62.3
+typing_extensions==4.0.1
+urllib3==1.26.7
+Werkzeug==2.0.2
+win-inet-pton==1.1.0
+wincertstore==0.2
+wrapt==1.13.3
+yarl @ file:///C:/ci/yarl_1602679793616/work
+zipp==3.6.0
