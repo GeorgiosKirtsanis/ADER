@@ -74,7 +74,7 @@ if __name__ == '__main__':
     os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dataset', default='DIGINETICA', type=str)  # name of dataset in ['DIGINETICA', 'YOOCHOOSE']
+    parser.add_argument('--dataset', default='T1', type=str)  # name of dataset in ['DIGINETICA', 'YOOCHOOSE']
     parser.add_argument('--save_dir', default='ADER', type=str)  # name of dictionary save the results
     # exemplar
     parser.add_argument('--exemplar_size', default=30000, type=int)  # size of exemplars
@@ -107,10 +107,6 @@ if __name__ == '__main__':
     parser.add_argument('--dropout_rate', default=0.3, type=float)
     parser.add_argument('--l2_emb', default=0.0, type=float)
     args = parser.parse_args()
-
-    # T1 has sequences of 50 items, while T2, T3 and T4 have sequences of 51 items (50 + target)
-    if args.dataset == 'T1':
-        args.maxlen == 50
 
     # Set path
     task_path = os.path.join('results', args.dataset + '-' + args.save_dir)
