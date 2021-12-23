@@ -103,7 +103,7 @@ if __name__ == '__main__':
     # hyper-parameter fixed
     parser.add_argument('--random_seed', default=0, type=int)
     parser.add_argument('--hidden_units', default=150, type=int)
-    parser.add_argument('--maxlen', default=50, type=int)
+    parser.add_argument('--maxlen', default=100, type=int)
     parser.add_argument('--dropout_rate', default=0.3, type=float)
     parser.add_argument('--l2_emb', default=0.0, type=float)
     args = parser.parse_args()
