@@ -3,12 +3,9 @@ import os
 import shutil
 
 ## Configure Hyperparameter Grid
-# learning_rate = [0.001, 0.002, 0.005, 0.01, 0.02, 0.05]
-learning_rate = [0.001, 0.002]
-# batch_size = [64, 128, 256, 512, 1024]
-batch_size = [256, 512]
-# dropout_rate = [0.2, 0.3, 0.5]
-dropout_rate = [0.3, 0.5]
+num_blocks = [1, 2, 3]
+num_heads = [1, 2, 3]
+hidden_units = [100, 150, 200]
 maxlen = [100, 101, 101, 101] ## 100 for T1 and 101 for T2, T3 and T4
 datasets = ['T1', 'T2', 'T3', 'T4']
 model = 'ADER'
@@ -19,9 +16,9 @@ if os.path.exists(dirpath) and os.path.isdir(dirpath):
 
 case = 1
 for i in range(4):
-    for lr in learning_rate:
-        for bs in batch_size:
-            for dr in dropout_rate:
+    for b in num_blocks:
+        for h in num_heads:
+            for u in hidden_units:
                 path = 'results/' + datasets[i] + '-' + model + '-CASE' + str(case)
                 if not os.path.isdir(path):
                     os.makedirs(path)
@@ -31,10 +28,10 @@ for i in range(4):
                 f.write('Dataset = ' + datasets[i] + '\n')
                 f.write('Model = ' + model + '\n')
                 f.write('MaxLen = ' + str(maxlen[i]) + '\n')
-                f.write('Learning_Rate = ' + str(lr) + '\n')
-                f.write('Batch_Size = ' + str(bs) + '\n')
-                f.write('Dropout_rate = ' + str(dr) + '\n')
+                f.write('Number of Blocks = ' + str(b) + '\n')
+                f.write('Number of Heads = ' + str(h) + '\n')
+                f.write('Hidden Units = ' + str(u) + '\n')
                 f.close()
                 for j in range(5):
-                    test.main(datasets[i], maxlen[i], model + '-CASE' + str(case), lr, bs, dr)
+                    test.main(datasets[i], maxlen[i], model + '-CASE' + str(case), b, h, u)
                 case += 1

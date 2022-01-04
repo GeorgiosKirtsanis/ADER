@@ -66,7 +66,7 @@ def load_exemplars(exemplar_pre: dict) -> list:
     return exemplars
 
 
-def main(dataset, maxlen, model, learning_rate, batch_size, dropout_rate):
+def main(dataset, maxlen, model, num_blocks, num_heads, hidden_units):
 
     gc.enable()
     tf.disable_v2_behavior()
@@ -92,19 +92,19 @@ def main(dataset, maxlen, model, learning_rate, batch_size, dropout_rate):
     parser.add_argument('--fix_lambda', default=False, type=bool) # if true, fix the adaptive weight
     # batch size and device setup
     parser.add_argument('--num_epochs', default=1, type=int)
-    parser.add_argument('--batch_size', default=batch_size, type=int)
-    parser.add_argument('--test_batch', default=batch_size, type=int)
+    parser.add_argument('--batch_size', default=256, type=int)
+    parser.add_argument('--test_batch', default=256, type=int)
     parser.add_argument('--device_num', default=0, type=int)
     # hyper-parameters grid search
-    parser.add_argument('--lr', default=learning_rate, type=float)
-    parser.add_argument('--num_blocks', default=2, type=int)
-    parser.add_argument('--num_heads', default=1, type=int)
+    parser.add_argument('--lr', default=0.001, type=float)
+    parser.add_argument('--num_blocks', default=num_blocks, type=int)
+    parser.add_argument('--num_heads', default=num_heads, type=int)
     parser.add_argument('--stop', default=5, type=int)  # number of epoch for early stop
     # hyper-parameter fixed
     parser.add_argument('--random_seed', default=0, type=int)
-    parser.add_argument('--hidden_units', default=150, type=int)
+    parser.add_argument('--hidden_units', default=hidden_units, type=int)
     parser.add_argument('--maxlen', default=maxlen, type=int)
-    parser.add_argument('--dropout_rate', default=dropout_rate, type=float)
+    parser.add_argument('--dropout_rate', default=0.3, type=float)
     parser.add_argument('--l2_emb', default=0.0, type=float)
     args = parser.parse_args()
 
